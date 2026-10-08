@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inport-metadata xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 version="1.7"
+                 source="https://www.fisheries.noaa.gov">
+   <item-identification>
+      <catalog-item-id>65779</catalog-item-id>
+      <title>C-CAP Land Cover, New Orleans Area Parishes, Louisiana, 2017</title>
+      <catalog-item-type>Data Set</catalog-item-type>
+      <metadata-workflow-state ccs-id="9">Published / External</metadata-workflow-state>
+      <parent-catalog-item-id>47841</parent-catalog-item-id>
+      <parent-title>C-CAP</parent-title>
+      <parent-catalog-item-type>Project</parent-catalog-item-type>
+      <status>Completed</status>
+      <publication-date>2021-12-08</publication-date>
+      <abstract>The NOAA Coastal Change Analysis Program (C-CAP) produces national standardized land cover and change products for the coastal regions of the U.S. C-CAP products inventory coastal intertidal areas, wetlands, and adjacent uplands with the goal of monitoring changes in these habitats through time. The timeframe for this metadata is summer 2016. These maps are developed utilizing high resolution aerial imagery, along with lidar and various available ancillary information, and can be used to track changes in the landscape through time. This trend information gives important feedback to managers on the success or failure of management policies and programs and aid in developing a scientific understanding of the Earth system and its response to natural and human-induced changes. This understanding allows for the prediction of impacts due to these changes and the assessment of their cumulative effects, helping coastal resource managers make more informed regional decisions. </abstract>
+      <purpose>C-CAP is dedicated to the development, distribution, and application of land cover and change data for the coastal regions of the U.S. </purpose>
+      <other-citation-details>USE RESTRICTIONS: This land cover data may not be used for the purpose of creating, training, improving, modifying, validating, testing, or evaluating machine learning algorithms, or otherwise leverage the product for the purposes of machine learning for a period of five years from its date of creation.
+
+In addition, the product is provided “as is,” without any warranty of any kind, including, without limitation, warranties of merchantability, fitness for a particular purpose, title, non-infringement or non-misappropriation of intellectual property rights of a third party, custom, trade, quiet enjoyment, accuracy of information, content or results, or conditions arising under any other legal requirement. Neither Ecopia nor its licensors warrant that the product will be accurate, current or complete, that the product will meet end user's needs or expectations, or that the operation of the product will be error free or uninterrupted. Further, spatial or temporal accuracy is not guaranteed. </other-citation-details>
+      <supplemental-information>Attributes for this product are as follows:
+
+0 Background,
+
+1 Unclassified (Cloud, Shadow, etc),
+
+2 Developed Impervious,
+
+3
+
+4
+
+5 Developed Open Space,
+
+6 Cultivated Land,
+
+7 Pasture/Hay,
+
+8 Grassland,
+
+9 
+
+10 
+
+11 Upland Forest,
+
+12 Scrub/Shrub,
+
+13 Palustrine Forested Wetland,
+
+14 Palustrine Scrub/Shrub Wetland,
+
+15 Palustrine Emergent Wetland,
+
+16 Estuarine Forested Wetland,
+
+17 Estuarine Scrub/Shrub Wetland,
+
+18 Estuarine Emergent Wetland,
+
+19 Unconsolidated Shore,
+
+20 Bare Land,
+
+21 Open Water,
+
+22 Palustrine Aquatic Bed,
+
+23 Estuarine Aquatic Bed,
+
+24 Tundra,
+
+25 Snow/Ice,
+
+Recommended Citation. NOAA Coastal Change Analysis Program (C-CAP) New Orleans Region High Resolution Land Cover Data. Data collected 2017. Charleston, SC: National Oceanic and Atmospheric Administration (NOAA) Office for Coastal Management. Data accessed at https://coast.noaa.gov/digitalcoast/data/ccaphighres.html.</supplemental-information>
+   </item-identification>
+   <keywords>
+      <keyword controlled="Yes">
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Science Keywords</thesaurus>
+         <keyword>EARTH SCIENCE &gt; LAND SURFACE &gt; LAND USE/LAND COVER</keyword>
+      </keyword>
+      <keyword controlled="Yes">
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Science Keywords</thesaurus>
+         <keyword>EARTH SCIENCE &gt; LAND SURFACE &gt; LAND USE/LAND COVER &gt; LAND USE/LAND COVER CLASSIFICATION</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Instrument Keywords</thesaurus>
+         <keyword>Earth Remote Sensing Instruments &gt; Passive Remote Sensing &gt; Photon/Optical Detectors &gt; Cameras &gt; CAMERAS</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Platform Keywords</thesaurus>
+         <keyword>Aircraft &gt; AIRCRAFT</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>ISO 19115 Topic Category</thesaurus>
+         <keyword>imageryBaseMapsEarthCover</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Theme</keyword-type>
+         <keyword>Land Cover</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Theme</keyword-type>
+         <keyword>Land Cover Analysis</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Theme</keyword-type>
+         <keyword>Remotely Sensed Imagery/Photos</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Ocean &gt; North America &gt; United States of America &gt; Washington</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Coastal Zone</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Jefferson Parish</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Louisiana</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Orleans Parish</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Plaquemines Parish</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Saint Bernard Parish</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Saint Charles Parish</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Saint John the Baptist Parish</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Saint Tammany Parish</keyword>
+      </keyword>
+      <keyword controlled="No">
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Tangipahoa Parish</keyword>
+      </keyword>
+   </keywords>
+   <physical-location>
+      <organization>Office for Coastal Management</organization>
+      <city>Charleston</city>
+      <state-province>SC</state-province>
+   </physical-location>
+   <data-set-information>
+      <data-set-scope-code>Data Set</data-set-scope-code>
+      <maintenance-note>5 years</maintenance-note>
+      <data-presentation-form>Image (digital)</data-presentation-form>
+      <distribution-liability>Users must assume responsibility to determine the usability of these data.</distribution-liability>
+   </data-set-information>
+   <entity-attribute-information partial-listing="No" total-count="0"/>
+   <support-roles>
+      <support-role cc-id="1096145" in-effect="Yes">
+         <support-role-type>Data Steward</support-role-type>
+         <from-date>2021-11-09</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>NOAA Office for Coastal Management</contact-name>
+         <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+         <contact-email>coastal.info@noaa.gov</contact-email>
+         <contact-address>2234 South Hobson Ave</contact-address>
+         <contact-address-city>Charleston</contact-address-city>
+         <contact-address-state>SC</contact-address-state>
+         <contact-address-zip>29405-2413</contact-address-zip>
+         <contact-phone-number>(843) 740-1202</contact-phone-number>
+         <contact-url>https://coast.noaa.gov</contact-url>
+         <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+         <contact-url-function>Online Resource</contact-url-function>
+      </support-role>
+      <support-role cc-id="1096147" in-effect="Yes">
+         <support-role-type>Distributor</support-role-type>
+         <from-date>2021-11-09</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>NOAA Office for Coastal Management</contact-name>
+         <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+         <contact-email>coastal.info@noaa.gov</contact-email>
+         <contact-address>2234 South Hobson Ave</contact-address>
+         <contact-address-city>Charleston</contact-address-city>
+         <contact-address-state>SC</contact-address-state>
+         <contact-address-zip>29405-2413</contact-address-zip>
+         <contact-phone-number>(843) 740-1202</contact-phone-number>
+         <contact-url>https://coast.noaa.gov</contact-url>
+         <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+         <contact-url-function>Online Resource</contact-url-function>
+      </support-role>
+      <support-role cc-id="1096148" in-effect="Yes">
+         <support-role-type>Metadata Contact</support-role-type>
+         <from-date>2021-11-09</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>NOAA Office for Coastal Management</contact-name>
+         <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+         <contact-email>coastal.info@noaa.gov</contact-email>
+         <contact-address>2234 South Hobson Ave</contact-address>
+         <contact-address-city>Charleston</contact-address-city>
+         <contact-address-state>SC</contact-address-state>
+         <contact-address-zip>29405-2413</contact-address-zip>
+         <contact-phone-number>(843) 740-1202</contact-phone-number>
+         <contact-url>https://coast.noaa.gov</contact-url>
+         <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+         <contact-url-function>Online Resource</contact-url-function>
+      </support-role>
+      <support-role cc-id="1096146" in-effect="Yes">
+         <support-role-type>Point of Contact</support-role-type>
+         <from-date>2021-11-09</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>NOAA Office for Coastal Management</contact-name>
+         <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+         <contact-email>coastal.info@noaa.gov</contact-email>
+         <contact-address>2234 South Hobson Ave</contact-address>
+         <contact-address-city>Charleston</contact-address-city>
+         <contact-address-state>SC</contact-address-state>
+         <contact-address-zip>29405-2413</contact-address-zip>
+         <contact-phone-number>(843) 740-1202</contact-phone-number>
+         <contact-url>https://coast.noaa.gov</contact-url>
+         <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+         <contact-url-function>Online Resource</contact-url-function>
+      </support-role>
+   </support-roles>
+   <extents>
+      <currentness-reference>Acquisition date of the aerial imagery</currentness-reference>
+      <extent cc-id="1096160">
+         <geographic-areas>
+            <geographic-area cc-id="1096162">
+               <west-bound>-90.73</west-bound>
+               <east-bound>-88.68583333333</east-bound>
+               <north-bound>31.00833333333</north-bound>
+               <south-bound>28.86666666667</south-bound>
+            </geographic-area>
+         </geographic-areas>
+         <time-frames>
+            <time-frame cc-id="1096161">
+               <time-frame-type>Discrete</time-frame-type>
+               <start-date-time>2017</start-date-time>
+            </time-frame>
+         </time-frames>
+      </extent>
+   </extents>
+   <spatial-information>
+      <spatial-representation>
+         <representations-used>
+            <grid>Yes</grid>
+         </representations-used>
+         <grid-representations>
+            <grid-representation cc-id="1096155">
+               <dimension-count>3</dimension-count>
+               <cell-geometry>Point</cell-geometry>
+               <transformation-parameters-available>No</transformation-parameters-available>
+               <axis-dimensions>
+                  <axis-dimension cc-id="1096156">
+                     <dimension-type>Row</dimension-type>
+                     <size>4166</size>
+                  </axis-dimension>
+                  <axis-dimension cc-id="1096157">
+                     <dimension-type>Column</dimension-type>
+                     <size>7703</size>
+                  </axis-dimension>
+                  <axis-dimension cc-id="1096158">
+                     <dimension-type>Vertical</dimension-type>
+                     <size>1</size>
+                  </axis-dimension>
+               </axis-dimensions>
+            </grid-representation>
+         </grid-representations>
+      </spatial-representation>
+   </spatial-information>
+   <access-information>
+      <security-class>Unclassified</security-class>
+      <data-access-constraints>None</data-access-constraints>
+      <data-use-constraints>Data set is not for use in litigation. While efforts have been made to ensure that these data are accurate and reliable within the state of the art, NOAA, cannot assume liability for any damages, or misrepresentations, caused by any inaccuracies in the data, or as a result of the data to be used on a particular system. NOAA makes no warranty, expressed or implied, nor does the fact of distribution constitute such a warranty.</data-use-constraints>
+   </access-information>
+   <urls>
+      <url cc-id="1096151">
+         <url>https://coast.noaa.gov/dataviewer/#/landcover/search/where:ID=9136</url>
+         <name>Data Access Viewer</name>
+      </url>
+      <url cc-id="1096149">
+         <url>https://coast.noaa.gov/digitalcoast/data/ccaphighres.html</url>
+      </url>
+      <url cc-id="1096150">
+         <url>https://chs.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/hires/</url>
+         <url-type>Online Resource</url-type>
+      </url>
+   </urls>
+   <technical-environment>
+      <description>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.2.2.1350</description>
+   </technical-environment>
+   <data-quality>
+      <accuracy>According to the accuracy assessment performed by NOAA Office for Coastal Management staff, the overall accuracy of this product is 93.5%.  There were 842 total points distributed across the county. The accuracy of each class is as follows (Producer's, User's accuracies): 
+
+Impervious (98.5%, 97.0%)
+Open Space Developed (93.4%, 95.0%)
+Cultivated (92.3%, 100%)
+Pasture/Hay (100%, 97.6%)
+Grassland (72.3%, 94.4%)
+Upland Forest (95.2%, 95.2%)
+Shrub/Scrub (89.2%, 71.7%)
+Palustrine Forested Wetland (97.5%, 96.3%)
+Palustrine Shrub/Scrub Wetland (94.1%, 87.3%)
+Palustrine Emergent Wetland (95.1%, 95.1%)
+Estuarine Forested Wetland (N/A, N/A)  
+Estuarine Shrub/Scrub Wetland (91.0%, 100%)
+Estuarine Emergent Wetland (95.4%, 86.195.2%)
+Unconsolidated Shore (80.0%, 100%)
+Bare Land (94.1%, 94.1%)
+Water (100%, 100%)
+Palustrine Aquatic Bed (92.9%, 92.9%)
+Estuarine Aquatic Bed (85.7%, 85.7%)
+Ice/Snow (NA, NA)
+
+Overall accuracy (93.5%)
+
+Points were sampled using a stratified random sampling scheme, with a minimum target sample of 20 points per class.  A few of the rarer categories did not meet this minimum threshold or were not sampled at all due to the relatively low total area of those classes. There were no pixels sampled for the Estuarine Forested Wetland class. The correct land cover classification was determined through analyst interpretation of the imagery used in creating the map, as well as possible references to GoogleEarth in order to reference additional dates/seasons of imagery for that location.  All points were interpreted by two analysts, plus a third who made a final determination when there was not agreement on the call. This analysis allowed for the use of fuzzy designations, or alternate calls he truth category where that truth call may not have been completely obvious, or where point locations are located so they could possibly be more than one category. 37 of the total 842 points were counted correct based on the use of that fuzzy call.</accuracy>
+      <completeness-report>Data does not exist for all classes.
+There are no pixels representing: class 1 (unclassified), class 9 (Deciduous Forest), 101 (Evergreen Forest), , 24 (Tundra), 25 (Perennial Ice/Snow), 26 (Dwarf Scrub - Alaska specific class), 27 (Sedge/Herbaceous), and 28 (Moss - Alaska specific).  Developed classes have been altered to exclude the percentage breakdown of impervious surfaces as the breakdown is not appropriate for high resolution mapping (Developed High Intensity (2), Developed Medium Intensity (3), and Developed Low Intensity (4) are reduced to Impervious (Class 2)).</completeness-report>
+      <conceptual-consistency>Tests for logical consistency indicate that all row and column positions in the selected latitude/longitude window contain data. Conversion and integration with vector files indicates that all positions are consistent with earth coordinates covering the same area. Attribute files are logically consistent.</conceptual-consistency>
+   </data-quality>
+   <lineage>
+      <lineage-process-steps>
+         <lineage-process-step cc-id="1096159">
+            <sequence-number>1</sequence-number>
+            <description>This dataset was created by NOAA's Ocean Service, Office for Coastal Management (OCM).
+
+Classification: The initial 1m spatial resolution 6 class high resolution land cover product was developed by Ecopia using a proprietary feature recognition technology. This involves taking each image and classifying the pixels based on spectral and spatial properties, based on training examples and analyst refinement.
+
+Water Refinement: Commission and omission errors associated with the Water class were addressed through manual interpretation and clean up in ERDAS Imagine. Once the review and edits were complete, the refined Water class was incorporated back into the land cover data set.
+
+Agriculture and Open Space Developed: Cultivated land, and Pasture/Hay, and Open Space Developed features were incorporated into the grassland category of the initial land cover product through a the use of a second CNN classification, subsequent modeling (based on the presence of impervious cover and ancillary information such as the USDA 2008 Common Land Unit data), and manual refinement. 
+
+Wetlands: Wetlands were derived through a modeling process which used ancillary data such as Soils (SSURGO), the National Wetlands Inventory (NWI) and topographic derivatives. Forest, shrub and grassland objects within the initial land cover that exhibited hydric characteristics based on the input ancillary layers were designated to their appropriate wetland category. The process relied mainly on the NWI to determine palustrine and estuarine distinctions.
+
+
+Attributes for this product are as follows:
+0	Background
+1	Unclassified
+2	Developed Impervious
+3
+4
+5	Developed, Open Space
+6	Cultivated Crops
+7	Pasture/Hay
+8	Grassland/Herbaceous
+9	
+10	
+11	Upland Forest
+12	Scrub/Shrub
+13	Palustrine Forested Wetland
+14	Palustrine Scrub/Shrub Wetland
+15	Palustrine Emergent Wetland
+16	Estuarine Forested Wetland
+17	Estuarine Scrub/Shrub Wetland
+18	Estuarine Emergent Wetland
+19	Unconsolidated Shore
+20	Bare Land
+21	Open Water
+22	Palustrine Acquatic Bed
+23      Estuarine Aquatic Bed,
+24      Tundra,
+25      Snow/Ice</description>
+            <process-date-time>2018-12-06T00:00:00</process-date-time>
+         </lineage-process-step>
+      </lineage-process-steps>
+   </lineage>
+   <catalog-details>
+      <guid>gov.noaa.nmfs.inport:65779</guid>
+      <metadata-record-created-by pers-id="20138">Erik Hund</metadata-record-created-by>
+      <metadata-record-created>2021-11-09T16:54:07</metadata-record-created>
+      <metadata-record-last-modified-by pers-id="20138">Erik Hund</metadata-record-last-modified-by>
+      <metadata-record-last-modified>2021-12-08T19:32:45</metadata-record-last-modified>
+      <record-published>2021-12-08</record-published>
+      <owner-organization>Office for Coastal Management</owner-organization>
+      <owner-organization-acronym>OCM</owner-organization-acronym>
+      <owner-organization-address/>
+      <owner-organization-address-city/>
+      <owner-organization-address-state/>
+      <owner-organization-address-zip/>
+      <owner-organization-address-country/>
+      <owner-organization-phone/>
+      <owner-organization-url/>
+      <owner-organization-business-hours/>
+      <owner-organization-group-id>1002</owner-organization-group-id>
+      <publication-status>Public</publication-status>
+      <is-do-not-publish>No</is-do-not-publish>
+      <metadata-next-review-date>2022-12-09</metadata-next-review-date>
+   </catalog-details>
+</inport-metadata>

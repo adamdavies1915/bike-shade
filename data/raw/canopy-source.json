@@ -1,0 +1,8 @@
+{
+  "url": "https://chs.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/hires/la/la_neworleans_2017_ccap_highres_landcover_20211213.tif",
+  "metadata_url": "https://www.fisheries.noaa.gov/inport/item/65779",
+  "retrieved_utc": "2026-10-08T21:55:49.569635+00:00",
+  "imagery_year": 2017,
+  "bytes": 1004133100,
+  "sha256": "eecde14a24ccf3383fee537416b99e42fdb493c56a7d5be0367f6e7e3c885d36"
+}

@@ -1,0 +1,106 @@
+/* Run against npm run dev, or BASE_URL=http://127.0.0.1:8081 for the container. */
+const {chromium} = require('playwright');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const base = process.env.BASE_URL || 'http://127.0.0.1:8080';
+
+(async () => {
+  fs.mkdirSync('test-results', {recursive:true});
+  const browser = await chromium.launch({headless:true});
+  const errors = [], results = [];
+  try {
+    for (const width of [1440,390]) {
+      const context = await browser.newContext({viewport:{width,height:width===390?844:1000},permissions:['clipboard-read','clipboard-write']});
+      const page = await context.newPage();
+      page.on('pageerror', e => errors.push(e.message));
+      await page.goto(base, {waitUntil:'networkidle'});
+      await page.waitForFunction(() => document.querySelector('#data-status').textContent.startsWith('Canopy: NOAA'));
+      assert.equal(await page.locator('#threshold').isEnabled(),true);
+      assert.equal(await page.locator('#canopy').isEnabled(),true);
+      await page.waitForFunction(()=>cityFeatures.length>0);
+      assert.equal(await page.locator('#city').count(),0);
+      assert.match(await page.locator('#designated-label').textContent(),/OSM-marked routes/);
+      assert.equal(await page.locator('#bikestreets-link').getAttribute('href'),'https://bikestreets.com/la/new-orleans/');
+      assert.equal(await page.locator('#traffic-miles').textContent(),'0.0');
+      assert.ok(Number(await page.locator('#route-miles').textContent())>0);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth<=innerWidth),true);
+      const initial = await page.evaluate(() => routes.getLayers().length);
+      await page.screenshot({path:`test-results/map-${width}.png`,fullPage:true});
+      await page.locator('#canopy').check();
+      assert.equal(await page.evaluate(()=>state.overlay.options.opacity),.9);
+      await page.waitForFunction(() => {const i=document.querySelector('.leaflet-image-layer');return i&&i.complete&&i.naturalWidth>0;});
+      await page.locator('#threshold').fill('60');
+      const filtered = await page.evaluate(() => routes.getLayers().length);
+      assert.ok(filtered<initial && filtered>0);
+      assert.equal(await page.evaluate(() => routes.getLayers().every(l => kind(l.feature.properties)==='construction'||l.feature.properties.canopy_pct>=60)),true);
+      await page.locator('#threshold').fill('0');
+      await page.locator('#network').uncheck();
+      assert.equal(await page.evaluate(() => routes.getLayers().every(l=>kind(l.feature.properties)==='construction')),true);
+      await page.locator('#designated').check();
+      await page.waitForFunction(()=>document.querySelectorAll('.route-pick[data-network="traffic"]').length===10);
+      assert.equal(await page.locator('.route-pick[data-network="network"]').count(),0);
+      const trafficMiles=Number(await page.locator('#traffic-miles').textContent());
+      assert.ok(trafficMiles>0);
+      assert.match(await page.locator('#traffic-canopy').textContent(),/^\d+%$/);
+      await page.locator('#threshold').fill('60');
+      assert.ok(Number(await page.locator('#traffic-miles').textContent())<trafficMiles);
+      assert.ok(parseInt(await page.locator('#traffic-canopy').textContent())>=60);
+      await page.locator('#threshold').fill('0');
+      assert.ok(await page.evaluate(()=>cityRoutes.getLayers().length)>0);
+      assert.equal(await page.evaluate(()=>cityRoutes.getLayers().every(l=>l.feature.properties.facility.startsWith('Existing ')&&l.options.dashArray==='3 3')),true);
+      assert.equal(await page.evaluate(() => routes.getLayers().some(l=>kind(l.feature.properties)==='designated')),true);
+      assert.equal(await page.evaluate(()=>{
+        const l=routes.getLayers().find(l=>kind(l.feature.properties)==='designated'&&l.feature.properties.canopy_pct>40);
+        return !!l&&l.options.color===color({...l.feature.properties,source_layer:'network'})&&l.options.dashArray==='3 3';
+      }),true);
+      await page.locator('.route-pick[data-network="traffic"]').first().click();
+      assert.equal(await page.evaluate(()=>bestHighlight.getLayers()[0].feature.properties.network),'traffic');
+      await page.locator('#designated').uncheck();
+      assert.equal(await page.evaluate(()=>bestHighlight.getLayers().length),0);
+      assert.equal(await page.locator('#traffic-miles').textContent(),'0.0');
+      assert.equal(await page.locator('#traffic-canopy').textContent(),'—');
+      assert.equal(await page.evaluate(()=>cityRoutes.getLayers().length),0);
+      await page.locator('#network').check();
+      await page.locator('#designated').check();
+      assert.equal(await page.locator('.route-pick').count(),20);
+      await page.locator('#designated').uncheck();
+      assert.equal(await page.locator('.route-pick').count(),10);
+      await page.locator('.route-pick').first().click();
+      assert.equal(await page.locator('.route-pick').first().getAttribute('aria-pressed'),'true');
+      assert.equal(await page.evaluate(()=>bestHighlight.getLayers().length),1);
+      await page.locator('#clear-pick').click();
+      assert.equal(await page.evaluate(()=>bestHighlight.getLayers().length),0);
+      await page.waitForFunction(()=>document.querySelectorAll('.leaflet-popup-content').length===0);
+      await page.locator('#neighborhood').selectOption({label:'Mid-City'});
+      await page.waitForFunction(()=>map.getZoom()>12);
+      await page.locator('#reset-button').click();
+      await page.waitForFunction(()=>map.getZoom()===12);
+      await page.evaluate(() => {
+        const layer=routes.getLayers().find(l=>l.feature.properties.canopy_pct>0&&kind(l.feature.properties)==='network');
+        map.fitBounds(layer.getBounds(),{maxZoom:16,animate:false});layer.openPopup();
+      });
+      await page.waitForSelector('.leaflet-popup-content');
+      assert.match(await page.locator('.leaflet-popup-content').textContent(),/% canopy/);
+      await page.locator('#about-button').click();
+      assert.equal(await page.locator('#about-dialog').isVisible(),true);
+      await page.keyboard.press('Escape');
+      assert.equal(await page.locator('#about-dialog').isVisible(),false);
+      await page.locator('#share-button').click();
+      const shared=await page.evaluate(()=>navigator.clipboard.readText());
+      assert.match(shared,/#lat=/);
+      await page.goto(shared,{waitUntil:'networkidle'});
+      assert.ok(await page.evaluate(()=>map.getZoom())>12);
+      results.push({width,initialVisibleParts:initial,filteredParts:filtered});
+      await context.close();
+    }
+    const failure=await browser.newPage();
+    await failure.route('**/data/routes.geojson',route=>route.abort());
+    await failure.goto(base);
+    await failure.waitForFunction(()=>document.querySelector('#data-status').classList.contains('error'));
+    assert.match(await failure.locator('#data-status').textContent(),/could not load/);
+    await failure.close();
+    assert.deepEqual(errors,[]);
+    fs.writeFileSync('test-results/browser.json',JSON.stringify({base,results,errors,missingDataErrorState:'passed'},null,2));
+    console.log(JSON.stringify({results,errors,missingDataErrorState:'passed'}));
+  } finally {await browser.close();}
+})().catch(error=>{console.error(error);process.exitCode=1;});

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#194d3f">
+  <meta name="description" content="Explore New Orleans’ Bike Streets network and tree canopy coverage with an independent, open-source map.">
+  <title>Bike Shade · New Orleans</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23194d3f'/%3E%3Cpath d='M12 27Q8 11 29 9Q31 28 12 27M12 29L25 14' fill='none' stroke='%23d9eeab' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/leaflet.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Bike Shade home"><span class="brandmark">↟</span> BIKE SHADE <span class="city">NEW ORLEANS</span></a>
+    <nav aria-label="Map actions"><button id="about-button">About the data <span>↗</span></button><button id="share-button">Share map</button></nav>
+  </header>
+  <main>
+    <aside class="sidebar" aria-label="Map controls">
+      <div class="intro"><span class="eyebrow">A LITTLE MORE GREEN IN YOUR RIDE</span><h1>Find your<br><em>shady side.</em></h1><p>Explore the Bike Streets network through the trees of New Orleans.</p></div>
+      <div id="data-status" class="notice" role="status">Loading local map data…</div>
+      <div class="field"><label for="neighborhood">EXPLORE A NEIGHBORHOOD</label><select id="neighborhood"><option value="">New Orleans · all areas</option></select></div>
+      <section class="layers" aria-labelledby="layers-heading">
+        <div class="layer-heading"><h2 id="layers-heading">On the map</h2><a id="bikestreets-link" href="https://bikestreets.com/la/new-orleans/" target="_blank" rel="noopener noreferrer">Bike Streets ↗</a></div>
+        <label class="layer"><span class="swatch network"></span><span><strong>Low-stress network</strong><small>Bike Streets’ community-mapped routes</small></span><input id="network" type="checkbox" checked></label>
+        <label class="layer"><span class="swatch designated"></span><span><strong>More traffic</strong><small id="designated-label">OSM-marked routes + city bikeways</small></span><input id="designated" type="checkbox"></label>
+        <label class="layer"><span class="swatch construction"></span><span><strong>Under construction</strong><small>Disruptions in the route snapshot</small></span><input id="construction" type="checkbox" checked></label>
+        <label class="layer"><span class="swatch canopy"></span><span><strong>Tree canopy</strong><small id="canopy-label">NOAA · 2017 imagery · awaiting import</small></span><input id="canopy" type="checkbox" disabled></label>
+      </section>
+      <section class="shade-filter"><div class="section-row"><h2>Nearby canopy</h2><output id="threshold-label" for="threshold">All routes</output></div><input id="threshold" type="range" min="0" max="80" step="10" value="0" disabled aria-label="Minimum canopy percentage"><div class="range-labels"><span>Show all</span><span>80% or more</span></div><p id="filter-help">Canopy measurements will appear after the NOAA dataset is imported.</p></section>
+      <section class="network-stats" aria-label="Network statistics">
+        <div class="stat-group"><h2>Low-stress · Bike Streets</h2><div class="stats"><div><strong id="route-miles">—</strong><span>miles shown</span></div><div><strong id="canopy-average">—</strong><span>mean canopy</span></div></div></div>
+        <div class="stat-group"><h2>More traffic · OSM + city</h2><div class="stats"><div><strong id="traffic-miles">—</strong><span>mapped miles shown</span></div><div><strong id="traffic-canopy">—</strong><span>mean canopy</span></div></div></div>
+        <p class="stats-note">Length-weighted canopy, excluding unknown coverage. OSM/city overlaps may count twice in their combined source totals. Includes all shown routes, not just this view.</p>
+      </section>
+      <section class="route-picks" aria-labelledby="picks-heading"><h2 id="picks-heading">Best-covered stretches</h2><p id="picks-description">Connected 1 km (0.62 mi) picks from enabled networks, ranked by nearby canopy. 2017 tree cover.</p><div id="best-routes" aria-live="polite">Finding route picks…</div><button id="clear-pick" hidden>Clear highlighted route</button><p class="fine">Exploratory corridors, not turn-by-turn directions. <a href="data/best-routes.geojson" download>Low-stress picks ↓</a> <a id="traffic-picks-download" href="data/best-routes-traffic.geojson" download hidden>More traffic picks ↓</a></p></section>
+      <div class="sidebar-foot"><span class="small-leaf">↟</span><p>Inspired by Bike Easy’s shaded routes project.<br><a href="https://bikeeasy.org/tips-guides/maps-trails-guides/shaded-bike-routes/" target="_blank" rel="noreferrer">Read the original story ↗</a></p></div>
+    </aside>
+    <section class="map-shell" aria-label="Interactive bicycle map">
+      <div id="map" aria-label="New Orleans bicycle routes" tabindex="0"></div>
+      <div class="map-toolbar"><span class="map-tag"><i></i> NEW ORLEANS, LA</span><button id="reset-button" title="Reset to New Orleans">⌖ <span>Reset view</span></button><button id="locate-button" title="Show your current location">◎ <span>Locate me</span></button></div>
+      <div id="map-message" class="map-message" role="status" hidden></div>
+      <div class="legend"><strong>CANOPY ALONG THE ROUTE</strong><div class="legend-colors"><span style="--color:#91a5ae">0–20%</span><span style="--color:#77b89a">20–40%</span><span style="--color:#24865b">40–60%</span><span style="--color:#005b3c">60%+</span></div><p>Solid: low stress · Dotted: more traffic + city</p><p><i class="unknown-dot"></i> Blue = not measured <span>·</span> Orange dash = construction</p><p>Pink highlight = selected route pick</p></div>
+      <div class="map-hint">Select a route segment to explore its canopy coverage</div>
+    </section>
+  </main>
+  <dialog id="about-dialog"><button class="close" id="close-about" aria-label="Close about dialog">×</button><span class="eyebrow">THE ROOTS OF THIS MAP</span><h2>Open tools.<br>Traceable data.</h2><p>This independent recreation uses <a href="https://leafletjs.com/">Leaflet</a> and locally stored data. It needs no ArcGIS account.</p><h3>The bike network</h3><p><a href="https://bikestreets.com/la/new-orleans/">Bike Streets</a> supplies the community-selected low-stress network and construction disruptions. The OSM-marked bikeways in “More traffic” are retrieved from the designated layer of Bike Streets’ public tiles. <span id="network-date"></span> This bounded snapshot covers the urban area through New Orleans East; it is not a complete parish inventory.</p><h3>City bikeways</h3><p>The <a href="https://www.arcgis.com/home/item.html?id=dbe68efb96304bd7b43c3424fceab175">City of New Orleans public bikeway layer</a> includes only facilities marked as existing. Proposed-only facilities are excluded. Its reported last data edit is February 18, 2025. The download is stored locally and uses the same canopy calculation. It appears together with OSM-marked bikeways under “More traffic,” using the same dotted canopy colors. This display grouping does not assign a traffic-stress rating to city facilities; their facility types remain in the popups. Each display layer has separate mileage and length-weighted canopy statistics, following its visibility and canopy filter. More traffic combines OSM and city source totals; overlapping linework may be counted twice. Unknown canopy is excluded from the average. These are mapped source lengths, not deduplicated street miles.</p><h3>Best-covered stretches</h3><p>These 1 km connected candidates from each enabled network are ranked by length-weighted nearby canopy. A bounded graph search finds strong candidates rather than an exhaustive mathematical optimum. Construction-marked segments are excluded, and picks sharing more than 25% of their source length are removed. The source does not supply the turn restrictions needed for turn-by-turn directions.</p><h3>What the canopy percentage means</h3><p>The analysis counts tree-canopy pixels within 10 meters of each route segment (up to 100 meters long), using NOAA’s 1-meter land-cover classification. At least 90% of a buffer must have valid data to receive a score. Unknown coverage is never shown as zero.</p><p><a href="https://www.fisheries.noaa.gov/inport/item/65779">NOAA C-CAP imagery is from 2017</a>, before Hurricane Ida and later tree loss or planting. Canopy near a street does not measure shade at a particular time of day. Ground-check routes and conditions.</p><h3>A new analysis, with the same inspiration</h3><p>Bike Easy’s original map included Laura Harris’s hand-selected shaded corridors and pink connectors. Those choices have not been recovered or recreated here. Colors on this map represent calculated canopy coverage when available.</p><p id="about-status" class="notice"></p><a class="download" href="data/routes.geojson" download>Download route data · GeoJSON ↓</a><a class="download" href="data/manifest.json" download>Download data sources &amp; method ↓</a><p class="fine">Map software: Leaflet (BSD-2-Clause). Background map: © OpenStreetMap contributors. Bike Streets data retains its original rights; an open-data redistribution license has not been verified.</p></dialog>
+  <noscript>This map requires JavaScript. <a href="data/routes.geojson">Download the route data</a>.</noscript>
+</body>
+</html>

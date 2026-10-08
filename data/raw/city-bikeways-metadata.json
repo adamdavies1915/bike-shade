@@ -1,0 +1,1179 @@
+{
+  "currentVersion": 12,
+  "id": 0,
+  "name": "Exising_and_Proposed_Bikeways_Staging",
+  "type": "Feature Layer",
+  "serviceItemId": "dbe68efb96304bd7b43c3424fceab175",
+  "cacheMaxAge": 30,
+  "isView": true,
+  "isUpdatableView": true,
+  "sourceSchemaChangesAllowed": true,
+  "displayField": "",
+  "description": "",
+  "copyrightText": "",
+  "defaultVisibility": true,
+  "ownershipBasedAccessControlForFeatures": {
+    "allowOthersToQuery": true,
+    "allowOthersToDelete": false,
+    "allowOthersToUpdate": false,
+    "allowAnonymousToQuery": true,
+    "allowAnonymousToUpdate": false,
+    "allowAnonymousToDelete": false
+  },
+  "editingInfo": {
+    "lastEditDate": 1739841416115,
+    "schemaLastEditDate": 1739841416115,
+    "dataLastEditDate": 1739841416115
+  },
+  "relationships": [],
+  "isDataVersioned": false,
+  "hasContingentValuesDefinition": false,
+  "supportsAppend": true,
+  "supportsCalculate": true,
+  "supportsASyncCalculate": true,
+  "supportsTruncate": false,
+  "supportsAttachmentsByUploadId": true,
+  "supportsAttachmentsResizing": true,
+  "supportsRollbackOnFailureParameter": true,
+  "supportsStatistics": true,
+  "supportsExceedsLimitStatistics": true,
+  "supportsAdvancedQueries": true,
+  "supportsValidateSql": true,
+  "supportsCoordinatesQuantization": true,
+  "supportsLayerOverrides": true,
+  "supportsTilesAndBasicQueriesMode": true,
+  "supportsFieldDescriptionProperty": true,
+  "supportsQuantizationEditMode": true,
+  "supportsColumnStoreIndex": true,
+  "supportsApplyEditsWithGlobalIds": true,
+  "supportsMultiScaleGeometry": true,
+  "supportsReturningQueryGeometry": true,
+  "enableNullGeometry": false,
+  "hasGeometryProperties": true,
+  "geometryProperties": {
+    "shapeLengthFieldName": "Shape__Length",
+    "units": "esriMeters"
+  },
+  "supportsOBACForAnonymousUsers": true,
+  "advancedQueryCapabilities": {
+    "supportsPagination": true,
+    "supportsPaginationOnAggregatedQueries": true,
+    "supportsQueryRelatedPagination": true,
+    "supportsQueryWithDistance": true,
+    "supportsOutDistance": true,
+    "supportsReturningQueryExtent": true,
+    "supportsStatistics": true,
+    "supportsOrderBy": true,
+    "supportsDistinct": true,
+    "supportsQueryWithResultType": true,
+    "supportsSqlExpression": true,
+    "supportsTimeRelation": true,
+    "supportsAdvancedQueryRelated": true,
+    "supportsCountDistinct": true,
+    "supportsPercentileStatistics": true,
+    "supportsApproxPercentileStatistics": true,
+    "supportsSpatialAggregationStatistics": true,
+    "supportsTrueCurve": true,
+    "supportedSpatialAggregationStatistics": [
+      "EnvelopeAggregate",
+      "CentroidAggregate",
+      "ConvexHullAggregate"
+    ],
+    "supportsLod": true,
+    "supportsQueryWithLodSR": false,
+    "supportedLodTypes": [
+      "geohash"
+    ],
+    "supportsReturningGeometryCentroid": false,
+    "supportsReturningGeometryEnvelope": true,
+    "supportsReturningGeometryProperties": true,
+    "supportsQueryWithDatumTransformation": true,
+    "supportsCurrentUserQueries": true,
+    "supportsHavingClause": true,
+    "supportsOutFieldSQLExpression": true,
+    "supportsMaxRecordCountFactor": true,
+    "supportsTopFeaturesQuery": true,
+    "supportsDisjointSpatialRel": true,
+    "supportsQueryWithCacheHint": true,
+    "supportedOperationsWithCacheHint": [
+      "query",
+      "queryTopFilter",
+      "queryAnalytics",
+      "queryAttachments",
+      "queryRelated",
+      "queryBins",
+      "queryPivot"
+    ],
+    "supportsQueryAnalytic": true,
+    "supportsQueryPivot": true,
+    "supportsQueryBins": true,
+    "supportsDefaultSR": true,
+    "supportsTranslations": false,
+    "supportsAggIds": true,
+    "supportsQueryWithCollation": true,
+    "supportsISODOW": true,
+    "supportsISOWeek": true,
+    "supportsFullTextSearch": true,
+    "fullTextSearchCapabilities": {
+      "supportsAccentSensitivity": true,
+      "supportsStopWords": true,
+      "supportsSearchOperator": true,
+      "supportsOperator": true
+    }
+  },
+  "advancedQueryAnalyticCapabilities": {
+    "supportsLinearRegression": true,
+    "supportsTrendlineRegression": true,
+    "supportsAsync": true,
+    "supportsPercentileAnalytic": true
+  },
+  "queryBinsCapabilities": {
+    "supportsAsync": true,
+    "supportsAutoIntervalBin": true,
+    "supportsFixedIntervalBin": true,
+    "supportsFixedBoundariesBin": true,
+    "supportsDateBin": true,
+    "supportsClassificationBin": true,
+    "supportsStackBy": true,
+    "supportsSplitBy": true,
+    "supportsFirstDayOfWeek": true,
+    "supportsSnapToData": true,
+    "supportsReturnFullIntervalBin": true,
+    "supportsReturnStackValueRange": true,
+    "supportsNormalization": true,
+    "supportedStatisticTypes": [
+      "COUNT",
+      "SUM",
+      "AVG",
+      "VAR",
+      "STDDEV",
+      "MIN",
+      "MAX",
+      "PERCENTILE_CONT",
+      "PERCENTILE_DISC",
+      "APPROX_PERCENTILE_CONT",
+      "APPROX_PERCENTILE_DISC",
+      "CentroidAggregate",
+      "EnvelopeAggregate",
+      "ConvexHullAggregate"
+    ],
+    "supportedNormalizationTypes": [
+      "boxCox",
+      "field",
+      "inverse",
+      "log",
+      "naturalLog",
+      "percentOfTotal",
+      "squareRoot"
+    ]
+  },
+  "supportedOperationsWithCollation": "query,addField,updateField",
+  "advancedEditingCapabilities": {
+    "supportedSqlFormatsInCalculate": [
+      "standard"
+    ],
+    "supportsAsyncApplyEdits": true,
+    "supportsReturnEditResults": true,
+    "supportsApplyEditsbyUploadID": true,
+    "supportedApplyEditsUploadIDFormats": "JSON,PBF",
+    "supportsTranslation": false,
+    "supportsMaxTranslations": 10
+  },
+  "infoInEstimates": [
+    "extent",
+    "count"
+  ],
+  "useStandardizedQueries": true,
+  "geometryType": "esriGeometryPolyline",
+  "minScale": 577791,
+  "maxScale": 0,
+  "extent": {
+    "xmin": -10034075.688313438,
+    "ymin": 3488983.6380575,
+    "xmax": -9989364.70402151,
+    "ymax": 3525778.9421056923,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    }
+  },
+  "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+  },
+  "drawingInfo": {
+    "renderer": {
+      "type": "simple",
+      "symbol": {
+        "color": [
+          153,
+          153,
+          153,
+          111
+        ],
+        "width": 2.25,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      }
+    },
+    "transparency": 29
+  },
+  "allowGeometryUpdates": true,
+  "trueCurveSupportMode": "OGC",
+  "supportedCurveTypes": [
+    "esriGeometryCircularArc"
+  ],
+  "supportedTrueCurvePbfFeatureEncodings": [
+    "esriCompressedShapeBuffer",
+    "esriDefault"
+  ],
+  "allowTrueCurvesUpdates": true,
+  "onlyAllowTrueCurveUpdatesByTrueCurveClients": false,
+  "hasAttachments": false,
+  "viewSourceHasAttachments": false,
+  "htmlPopupType": "esriServerHTMLPopupTypeNone",
+  "hasM": false,
+  "hasZ": false,
+  "objectIdField": "FID",
+  "uniqueIdField": {
+    "name": "FID",
+    "isSystemMaintained": true
+  },
+  "globalIdField": "GlobalID",
+  "typeIdField": "",
+  "collation": {
+    "locale": "neutral",
+    "caseSensitive": false,
+    "accentSensitive": true
+  },
+  "fields": [
+    {
+      "name": "FID",
+      "type": "esriFieldTypeOID",
+      "actualType": "int",
+      "alias": "FID",
+      "sqlType": "sqlTypeInteger",
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_01",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Centerline: ID",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_02",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Centerline: Name",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_03",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Centerline: Segment ID",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_04",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Centerline: Project ID",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_05",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Centerline: JID",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_06",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Centerline: JID Street Label",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_07",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Centerline: JID From Label",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_08",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Centerline: JID To Label",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Proposed_",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Proposed: ID",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Propose_01",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Proposed: Street Name",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 20,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Propose_02",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Proposed: Facility Type",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 28,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Propose_02_4429f370-2276-493c-8c78-12f4e6e8f5b1",
+        "codedValues": [
+          {
+            "name": "Proposed Protected Bike Lane",
+            "code": "Proposed Protected Bike Lane"
+          },
+          {
+            "name": "Proposed Bike Boulevard",
+            "code": "Proposed Bike Boulevard"
+          },
+          {
+            "name": "Proposed Bike Lane",
+            "code": "Proposed Bike Lane"
+          },
+          {
+            "name": "Proposed Shared Use Path",
+            "code": "Proposed Shared Use Path"
+          },
+          {
+            "name": "Proposed Future Study Needed",
+            "code": "Proposed Future Study Needed"
+          },
+          {
+            "name": "None",
+            "code": "None"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Propose_03",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Proposed: Upgrade",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Propose_03_bab769d2-fb34-4ec1-8933-0fd182b243a1",
+        "codedValues": [
+          {
+            "name": "0",
+            "code": 0
+          },
+          {
+            "name": "1",
+            "code": 1
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Propose_06",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Proposed: Project Corridor ID",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Propose_07",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Proposed: District",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 30,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Propose_08",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Proposed: GISID",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Existing_",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Existing: ID",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_01",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Barrier",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_03",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Contraflow",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_03_9b4523d4-9064-4123-8c37-b96ef13c2dba",
+        "codedValues": [
+          {
+            "name": "0",
+            "code": "0"
+          },
+          {
+            "name": "1",
+            "code": "1"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_04",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Divided Roadway",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_04_34263842-e2d5-463a-863a-51a1a17c6a8b",
+        "codedValues": [
+          {
+            "name": "0",
+            "code": "0"
+          },
+          {
+            "name": "1",
+            "code": "1"
+          },
+          {
+            "name": "True",
+            "code": "True"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_05",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Facility Type",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 28,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_05_2d3ccdc3-fdcc-44aa-8aee-5e143048d62e",
+        "codedValues": [
+          {
+            "name": "None",
+            "code": "None"
+          },
+          {
+            "name": "Existing Bike Lane",
+            "code": "Existing Bike Lane"
+          },
+          {
+            "name": "Existing Shared Lane",
+            "code": "Existing Shared Lane"
+          },
+          {
+            "name": "Existing Protected Bike Lane",
+            "code": "Existing Protected Bike Lane"
+          },
+          {
+            "name": "Existing Bike Boulevard",
+            "code": "Existing Bike Boulevard"
+          },
+          {
+            "name": "Existing Bus/Bike Lane",
+            "code": "Existing Bus/Bike Lane"
+          },
+          {
+            "name": "Existing Shared Use Path",
+            "code": "Existing Shared Use Path"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_06",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Install Quarter",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_06_a53efaab-0ca2-4f66-88db-4542089c5219",
+        "codedValues": [
+          {
+            "name": "1Q",
+            "code": "1Q"
+          },
+          {
+            "name": "2Q",
+            "code": "2Q"
+          },
+          {
+            "name": "3Q",
+            "code": "3Q"
+          },
+          {
+            "name": "4Q",
+            "code": "4Q"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_07",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Install Year",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_07_a4d90ece-302a-4a8d-8d9b-3332fd64eb81",
+        "codedValues": [
+          {
+            "name": "2005",
+            "code": "2005"
+          },
+          {
+            "name": "2008",
+            "code": "2008"
+          },
+          {
+            "name": "2009",
+            "code": "2009"
+          },
+          {
+            "name": "2010",
+            "code": "2010"
+          },
+          {
+            "name": "2011",
+            "code": "2011"
+          },
+          {
+            "name": "2012",
+            "code": "2012"
+          },
+          {
+            "name": "2013",
+            "code": "2013"
+          },
+          {
+            "name": "2014",
+            "code": "2014"
+          },
+          {
+            "name": "2015",
+            "code": "2015"
+          },
+          {
+            "name": "2016",
+            "code": "2016"
+          },
+          {
+            "name": "2017",
+            "code": "2017"
+          },
+          {
+            "name": "2018",
+            "code": "2018"
+          },
+          {
+            "name": "2019",
+            "code": "2019"
+          },
+          {
+            "name": "2020",
+            "code": "2020"
+          },
+          {
+            "name": "2021",
+            "code": "2021"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_08",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Lane Width",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Centerl_13",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Centerline: Geometry Length - Miles",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_13",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Neutral Ground",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_13_a8dd833c-76ef-464b-8cec-73e590c9c195",
+        "codedValues": [
+          {
+            "name": "False",
+            "code": "False"
+          },
+          {
+            "name": "True",
+            "code": "True"
+          },
+          {
+            "name": "0",
+            "code": "0"
+          },
+          {
+            "name": "1",
+            "code": "1"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_16",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Plan Source",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_16_b5800f40-50af-41d9-8342-acec0ccbb99e",
+        "codedValues": [
+          {
+            "name": "2010",
+            "code": "2010"
+          },
+          {
+            "name": "2013",
+            "code": "2013"
+          },
+          {
+            "name": "2030",
+            "code": "2030"
+          },
+          {
+            "name": "NOTMP",
+            "code": "NOTMP"
+          },
+          {
+            "name": "UNOP",
+            "code": "UNOP"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_18",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Route Name",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_19",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Status",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_19_6c0c7a3e-7c09-4eaf-8ec6-971d161317e9",
+        "codedValues": [
+          {
+            "name": "Completed",
+            "code": "Completed"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_20",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Existing: LTS",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_20_4f8c9cd7-da04-412d-8a5e-d9dfe21aa084",
+        "codedValues": [
+          {
+            "name": "0",
+            "code": 0
+          },
+          {
+            "name": "1",
+            "code": 1
+          },
+          {
+            "name": "2",
+            "code": 2
+          },
+          {
+            "name": "3",
+            "code": 3
+          },
+          {
+            "name": "4",
+            "code": 4
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_21",
+      "type": "esriFieldTypeString",
+      "actualType": "nvarchar",
+      "alias": "Existing: Two-Way",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 254,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_21_8e8b4c9a-bdeb-48e6-85bf-078dd9354b22",
+        "codedValues": [
+          {
+            "name": "0",
+            "code": "0"
+          },
+          {
+            "name": "1",
+            "code": "1"
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "Existin_22",
+      "type": "esriFieldTypeDouble",
+      "actualType": "float",
+      "alias": "Existing: Update Year",
+      "sqlType": "sqlTypeFloat",
+      "nullable": true,
+      "editable": true,
+      "domain": {
+        "type": "codedValue",
+        "name": "Exising_and_Proposed_Bikeways_Staging_Existin_22_b14ef0f7-7ef2-400d-8a6a-e32b2cc33210",
+        "codedValues": [
+          {
+            "name": "0",
+            "code": 0
+          },
+          {
+            "name": "2018",
+            "code": 2018
+          }
+        ]
+      },
+      "defaultValue": null
+    },
+    {
+      "name": "GlobalID",
+      "type": "esriFieldTypeGlobalID",
+      "alias": "Automatically Generated - Global ID",
+      "sqlType": "sqlTypeOther",
+      "length": 38,
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": "NEWID() WITH VALUES"
+    },
+    {
+      "name": "CreationDate",
+      "type": "esriFieldTypeDate",
+      "alias": "Edits Tracking: Feature Creation Date",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+    },
+    {
+      "name": "Creator",
+      "type": "esriFieldTypeString",
+      "alias": "Edits Tracking: Creator (Username)",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "EditDate",
+      "type": "esriFieldTypeDate",
+      "alias": "Edits Tracking: Most Recent Edit Date",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+    },
+    {
+      "name": "Editor",
+      "type": "esriFieldTypeString",
+      "alias": "Edits Tracking: Most Recent Editor (Username)",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PK__EXISING___C1BEA5A26F2BF704",
+      "fields": "FID",
+      "isAscending": true,
+      "isUnique": true,
+      "description": "clustered, unique, primary key",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "user_791.EXISING_AND_PROPOSED_BIKEWAYS_STAGING_EXISING_AND_PROPOSED_BIKEWAYS_STAGING_Shape_sidx",
+      "fields": "Shape",
+      "isAscending": false,
+      "isUnique": false,
+      "description": "Shape Index",
+      "indexType": "Spatial"
+    },
+    {
+      "name": "undefined_Index",
+      "fields": "",
+      "isAscending": false,
+      "isUnique": false,
+      "description": "",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "Existin_05_Index",
+      "fields": "Existin_05",
+      "isAscending": true,
+      "isUnique": false,
+      "description": "Existin_05_Index",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "Existing__Index",
+      "fields": "Existing_",
+      "isAscending": true,
+      "isUnique": false,
+      "description": "Existing__Index",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "Proposed__Index",
+      "fields": "Proposed_",
+      "isAscending": true,
+      "isUnique": false,
+      "description": "Proposed__Index",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "Propose_02_Index",
+      "fields": "Propose_02",
+      "isAscending": true,
+      "isUnique": false,
+      "description": "Propose_02_Index",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "GlobalID_Index",
+      "fields": "GlobalID",
+      "isAscending": false,
+      "isUnique": true,
+      "description": "",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "CreationDateIndex",
+      "fields": "CreationDate",
+      "isAscending": true,
+      "isUnique": false,
+      "description": "CreationDate Field index",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "CreatorIndex",
+      "fields": "Creator",
+      "isAscending": false,
+      "isUnique": false,
+      "description": "Creator Field index",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "EditDateIndex",
+      "fields": "EditDate",
+      "isAscending": true,
+      "isUnique": false,
+      "description": "EditDate Field index",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "EditorIndex",
+      "fields": "Editor",
+      "isAscending": false,
+      "isUnique": false,
+      "description": "Editor Field index",
+      "indexType": "Attribute"
+    },
+    {
+      "name": "Existin_07_Index",
+      "fields": "Existin_07",
+      "isAscending": true,
+      "isUnique": false,
+      "description": "Existin_07_Index",
+      "indexType": "Attribute"
+    }
+  ],
+  "dateFieldsTimeReference": {
+    "timeZone": "UTC",
+    "timeZoneIANA": "Etc/UTC",
+    "respectsDaylightSaving": false
+  },
+  "preferredTimeReference": null,
+  "types": [],
+  "templates": [
+    {
+      "name": "New Feature",
+      "description": "",
+      "drawingTool": "esriFeatureEditToolLine",
+      "prototype": {
+        "attributes": {
+          "Centerl_01": null,
+          "Centerl_02": null,
+          "Centerl_03": null,
+          "Centerl_04": null,
+          "Centerl_05": null,
+          "Centerl_06": null,
+          "Centerl_07": null,
+          "Centerl_08": null,
+          "Centerl_09": null,
+          "Centerl_10": null,
+          "Centerl_11": null,
+          "Centerl_12": null,
+          "Proposed_": null,
+          "Propose_01": null,
+          "Propose_02": null,
+          "Propose_03": null,
+          "Propose_04": null,
+          "Propose_05": null,
+          "Propose_06": null,
+          "Propose_07": null,
+          "Propose_08": null,
+          "Propose_09": null,
+          "Existing_": null,
+          "Existin_01": null,
+          "Existin_02": null,
+          "Existin_03": null,
+          "Existin_04": null,
+          "Existin_05": null,
+          "Existin_06": null,
+          "Existin_07": null,
+          "Existin_08": null,
+          "Centerl_13": null,
+          "Existin_09": null,
+          "Existin_10": null,
+          "Existin_11": null,
+          "Existin_12": null,
+          "Existin_13": null,
+          "Existin_14": null,
+          "Existin_15": null,
+          "Existin_16": null,
+          "Existin_17": null,
+          "Existin_18": null,
+          "Existin_19": null,
+          "Existin_20": null,
+          "Existin_21": null,
+          "Existin_22": null
+        }
+      }
+    }
+  ],
+  "supportedQueryFormats": "JSON, geoJSON, PBF",
+  "supportedAppendFormats": "sqlite,geoPackage,shapefile,filegdb,featureCollection,geojson,csv,excel,jsonl,featureService,pbf",
+  "supportedAppendSourceFilterFormats": "sqlite,geoPackage,shapefile,filegdb,featureService",
+  "supportedExportFormats": "csv,shapefile,sqlite,geoPackage,filegdb,featureCollection,geojson,kml,excel,parquet",
+  "supportedConvertFileFormats": "JSON,PBF,Parquet",
+  "supportedConvertContentFormats": "LayerEditCollection,FeatureCollection",
+  "supportedSpatialRelationships": [
+    "esriSpatialRelIntersects",
+    "esriSpatialRelContains",
+    "esriSpatialRelCrosses",
+    "esriSpatialRelEnvelopeIntersects",
+    "esriSpatialRelIndexIntersects",
+    "esriSpatialRelOverlaps",
+    "esriSpatialRelTouches",
+    "esriSpatialRelWithin",
+    "esriSpatialRelDisjoint",
+    "esriSpatialRelRelation"
+  ],
+  "guidFormat": "",
+  "supportsContingentValues": true,
+  "supportsEditingContingentValues": true,
+  "supportedContingentValuesFormats": "JSON, PBF",
+  "supportsFieldGroups": true,
+  "supportedSyncDataOptions": 260,
+  "hasStaticData": true,
+  "maxRecordCount": 2000,
+  "standardMaxRecordCount": 2000,
+  "maxIdsCount": 1000000,
+  "standardMaxRecordCountNoGeometry": 32000,
+  "tileMaxRecordCount": 4000,
+  "maxRecordCountFactor": 1,
+  "capabilities": "Query"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "City of New Orleans neighborhoods",
+  "retrieved_utc": "2026-10-01T05:50:13.558838+00:00",
+  "url": "https://maps.nola.gov/server/rest/services/Reference/Reference_Layers/MapServer/0",
+  "records": 72,
+  "sha256": "81e694ca2cf4daf10a4e7737d397ee39d7d2c1e9f62f76fb962c83de0db431c8"
+}

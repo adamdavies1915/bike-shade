@@ -1,0 +1,23 @@
+{
+  "name": "City of New Orleans existing bikeways",
+  "url": "https://services.arcgis.com/VhMjCzR3cIjEkh7L/ArcGIS/rest/services/Existing_and_Proposed_Bikeways_View_Layer/FeatureServer/0",
+  "item_url": "https://www.arcgis.com/home/item.html?id=dbe68efb96304bd7b43c3424fceab175",
+  "retrieved_utc": "2026-10-08T22:08:29.348322+00:00",
+  "service_data_last_edit_utc": "2025-02-18T01:16:56.115000+00:00",
+  "filter": "Existin_05 IN ('Existing Bike Lane','Existing Shared Lane','Existing Protected Bike Lane','Existing Bike Boulevard','Existing Bus/Bike Lane','Existing Shared Use Path')",
+  "source_features": 2609,
+  "segments": 4603,
+  "raw_sha256": "2f28377d5c846a1b32c9fa52abe3e6fd2d6410a1e946ba072cff3d81256bb4cd",
+  "output_sha256": "83da952aeeb515c2ba24e9e0b4fd3c17162fb267ba29cb1bc59d055914d98879",
+  "facility_counts": {
+    "Existing Shared Lane": 919,
+    "Existing Bike Lane": 1284,
+    "Existing Bike Boulevard": 96,
+    "Existing Protected Bike Lane": 240,
+    "Existing Shared Use Path": 62,
+    "Existing Bus/Bike Lane": 8
+  },
+  "canopy_sha256": "eecde14a24ccf3383fee537416b99e42fdb493c56a7d5be0367f6e7e3c885d36",
+  "canopy_imagery_year": 2017,
+  "notes": "Existing facilities only; proposed-only facilities excluded. Snapshot is not a guarantee of present street conditions. Outside canopy subset remains unknown."
+}

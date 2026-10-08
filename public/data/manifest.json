@@ -1,0 +1,69 @@
+{
+  "status": "ready",
+  "network": {
+    "name": "Bike Streets",
+    "url": "https://bikestreets.com/la/new-orleans/",
+    "retrieved_utc": "2026-10-08T21:55:21.697583+00:00",
+    "bbox": [
+      -90.16,
+      29.875,
+      -89.72,
+      30.18
+    ],
+    "sha256": "199189f05330280aff6df3af573fd5db9785ba7fd25ade814154fb2706fefcfc"
+  },
+  "canopy": {
+    "name": "NOAA C-CAP New Orleans land cover",
+    "year": 2017,
+    "resolution_m": 1,
+    "url": "https://chs.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/hires/la/la_neworleans_2017_ccap_highres_landcover_20211213.tif",
+    "metadata_url": "https://www.fisheries.noaa.gov/inport/item/65779",
+    "downloaded": true,
+    "canopy_classes": [
+      11,
+      13,
+      16
+    ],
+    "sha256": "eecde14a24ccf3383fee537416b99e42fdb493c56a7d5be0367f6e7e3c885d36",
+    "retrieved_utc": "2026-10-08T21:55:49.569635+00:00",
+    "overlay": {
+      "url": "data/canopy.png",
+      "bounds": [
+        [
+          29.875,
+          -90.16
+        ],
+        [
+          30.18,
+          -89.72
+        ]
+      ],
+      "display_only": true,
+      "resampling": "nearest",
+      "width": 4096,
+      "height": 3280
+    }
+  },
+  "method": {
+    "buffer_m": 10,
+    "maximum_segment_m": 100,
+    "minimum_valid_coverage_pct": 90,
+    "description": "Percent of classified 1 m pixels within 10 m of each route segment that are tree canopy. This is nearby canopy, not time-of-day shade."
+  },
+  "limitations": [
+    "2017 imagery predates Hurricane Ida and subsequent tree loss and planting.",
+    "Routes are a dated snapshot; construction and riding conditions may have changed.",
+    "This recreation does not recover Laura Harris\u2019s hand-selected connectors."
+  ],
+  "neighborhoods": {
+    "name": "City of New Orleans neighborhoods",
+    "retrieved_utc": "2026-10-01T05:50:13.558838+00:00",
+    "url": "https://maps.nola.gov/server/rest/services/Reference/Reference_Layers/MapServer/0",
+    "records": 72,
+    "sha256": "81e694ca2cf4daf10a4e7737d397ee39d7d2c1e9f62f76fb962c83de0db431c8"
+  },
+  "segments": 19029,
+  "generated_utc": "2026-10-08T21:57:17.706751+00:00",
+  "measured_segments": 19026,
+  "routes_sha256": "094ea98dc024aa75a0aee1f7de62dc777bf791d609ed17415bb01ef678128d0c"
+}

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+data/raw/*.tif
+data/raw/*.part
+data/raw/tiles/
+.DS_Store
+test-results/
+node_modules/
+.env
+.env.*
+!.env.example
+
