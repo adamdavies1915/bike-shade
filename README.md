@@ -95,3 +95,11 @@ The current canopy import and checks are complete. To deploy:
 For a local container check: `docker build -t bike-shade .` then `docker run --rm -p 8080:80 bike-shade`.
 
 The Docker image includes only `public/` and nginx configuration. Refresh data locally and redeploy to publish a new snapshot. For embedding on Bike Easy, use an iframe pointed at the deployed HTTPS URL; the server intentionally does not add a frame-blocking header.
+
+## Embedding
+
+Click **Embed** on the live map to copy an iframe with the current view, enabled layers and canopy filter. The `?embed=1` view fills its frame and offers collapsible Map controls. Suggested height: 650px; width: 100%. The embedding site must allow `https://bikeshade.cargobay.dev` in its iframe/content security policy.
+
+```html
+<iframe src="https://bikeshade.cargobay.dev/?embed=1" title="Bike Shade — New Orleans" width="100%" height="650" style="border:0" loading="lazy" allow="geolocation"></iframe>
+```

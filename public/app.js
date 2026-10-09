@@ -1,6 +1,13 @@
 /* Locally hosted Leaflet and data; only the background tiles use a third-party service. */
 'use strict';
 const $ = id => document.getElementById(id);
+const embedMode = new URLSearchParams(location.search).get('embed') === '1';
+if (embedMode) { document.body.classList.add('embedded'); $('embed-controls').hidden=false; }
+const initialParams = new URLSearchParams(location.hash.slice(1));
+for (const id of ['network','designated','construction','canopy']) {
+  if (['0','1'].includes(initialParams.get(id))) $(id).checked=initialParams.get(id)==='1';
+}
+if (/^(0|[1-8]0)$/.test(initialParams.get('threshold') || '')) $('threshold').value=initialParams.get('threshold');
 const state = {features: [], manifest: null, selected: null, overlay: null};
 const map = L.map('map', {zoomControl: false, preferCanvas: true}).setView([29.978, -90.075], 12);
 L.control.zoom({position: 'topright'}).addTo(map);
@@ -49,7 +56,7 @@ function renderPicks() {
   for (const [i,feature] of enabled.entries()) {
     const p=feature.properties,button=document.createElement('button');
     button.className='route-pick';button.dataset.network=p.network;button.setAttribute('aria-pressed',String(selectedPick===p.key));
-    const category=p.network==='traffic'?'More traffic':'Low-stress';
+    const category=p.network==='traffic'?'Designated bike routes (more traffic)':'Low-stress';
     const rank=document.createElement('span');rank.className='rank';rank.textContent=String(i+1).padStart(2,'0');
     const name=document.createElement('span');name.className='pick-name';name.textContent=p.neighborhood;
     const detail=document.createElement('small');detail.textContent=`${category} · 1 km / 0.62 mi`;name.append(detail);
@@ -89,7 +96,7 @@ function styleRoute(f) {
 function popup(f) {
   const p = f.properties, box = document.createElement('div');
   const label = document.createElement('div'); label.className = 'popup-label';
-  label.textContent = {network: 'Low-stress network', designated: 'More traffic', construction: 'Construction disruption',city:'City of New Orleans bikeway'}[kind(p)];
+  label.textContent = {network: 'Low-stress network', designated: 'Designated bike routes (more traffic)', construction: 'Construction disruption',city:'City of New Orleans bikeway'}[kind(p)];
   const score = document.createElement('strong'); score.className = 'popup-score';
   score.textContent = p.canopy_pct == null ? 'Not measured' : `${Math.round(p.canopy_pct)}% canopy`;
   const detail = document.createElement('div');
@@ -186,10 +193,31 @@ $('about-button').addEventListener('click', () => $('about-dialog').showModal())
 $('close-about').addEventListener('click', () => $('about-dialog').close());
 $('about-dialog').addEventListener('click', e => { if (e.target === $('about-dialog')) { const b = e.target.getBoundingClientRect(); if (e.clientX < b.left || e.clientX > b.right || e.clientY < b.top || e.clientY > b.bottom) e.target.close(); } });
 $('share-button').addEventListener('click', async () => {
-  const center = map.getCenter();
-  const url = new URL(location.href); url.hash = new URLSearchParams({lat:center.lat.toFixed(5),lng:center.lng.toFixed(5),z:map.getZoom()}).toString();
+  const url = mapUrl(false);
   try { await navigator.clipboard.writeText(url.href); $('share-button').textContent = 'Link copied'; setTimeout(() => {$('share-button').textContent = 'Share map';},2000); }
   catch { history.replaceState(null,'',url.href); message('The address bar now contains this map view. Copy its URL to share.'); }
+});
+function mapUrl(embed) {
+  const center=map.getCenter(), url=new URL(location.href);
+  if (embed) url.searchParams.set('embed','1'); else url.searchParams.delete('embed');
+  const params=new URLSearchParams({lat:center.lat.toFixed(5),lng:center.lng.toFixed(5),z:map.getZoom()});
+  for (const id of ['network','designated','construction','canopy']) params.set(id,$(id).checked?'1':'0');
+  params.set('threshold',$('threshold').value);url.hash=params.toString();return url;
+}
+$('embed-controls').addEventListener('click',()=>{
+  const open=document.body.classList.toggle('controls-open');
+  $('embed-controls').setAttribute('aria-expanded',String(open));
+  $('embed-controls').textContent=open?'Close controls':'Map controls';
+});
+$('embed-button').addEventListener('click',()=>{
+  const url=mapUrl(true).href.replace(/&/g,'&amp;').replace(/"/g,'&quot;');
+  $('embed-code').value=`<iframe src="${url}" title="Bike Shade — New Orleans bike routes and tree canopy" width="100%" height="650" style="border:0; border-radius:12px" loading="lazy" allow="geolocation"></iframe>`;
+  $('embed-copy-status').textContent='';$('embed-dialog').showModal();
+});
+$('close-embed').addEventListener('click',()=>$('embed-dialog').close());
+$('copy-embed').addEventListener('click',async()=>{
+  try { await navigator.clipboard.writeText($('embed-code').value);$('embed-copy-status').textContent='Embed code copied.'; }
+  catch { $('embed-code').focus();$('embed-code').select();$('embed-copy-status').textContent='Copy the selected code to paste into your website.'; }
 });
 initialize();
 loadPicks();
