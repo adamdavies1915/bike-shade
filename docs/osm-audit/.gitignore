@@ -1,0 +1,4 @@
+osm-*.json
+*-ways.json
+history-*.json
+api-tiles/

@@ -1,0 +1,69 @@
+{
+  "id": "dbe68efb96304bd7b43c3424fceab175",
+  "owner": "eGIS_ADMIN",
+  "ownerId": "68ec0c94a6317da18972d1166df726f3",
+  "orgId": "VhMjCzR3cIjEkh7L",
+  "created": 1599755819000,
+  "modified": 1778983642000,
+  "guid": null,
+  "name": "Existing_and_Proposed_Bikeways_View_Layer",
+  "title": "Existing and Proposed Bikeways: Public View Layer",
+  "type": "Feature Service",
+  "typeKeywords": [
+    "ArcGIS Server",
+    "Data",
+    "Feature Access",
+    "Feature Service",
+    "Service",
+    "Singlelayer",
+    "Hosted Service",
+    "View Service"
+  ],
+  "description": null,
+  "tags": [
+    "DPW"
+  ],
+  "snippet": null,
+  "thumbnail": "thumbnail/ago_downloaded.png",
+  "documentation": null,
+  "extent": [
+    [
+      -90.13763552824068,
+      29.88661553655718
+    ],
+    [
+      -89.73598992266602,
+      30.172783500457843
+    ]
+  ],
+  "categories": [],
+  "spatialReference": "102100",
+  "accessInformation": null,
+  "classification": null,
+  "licenseInfo": "<p>This data, web map, and spatial application are provided for general informational purposes only and are not intended for use as a legally authoritative source. The City of New Orleans makes no warranties, expressed or implied, as to the accuracy, completeness, or fitness of this data, web map, or spatial application for any particular purpose. Users assume all responsibility for any decisions made based on this information. This data should not be used as a substitute for field verification, engineering surveys, or official City of New Orleans records.</p><p><br /></p><p>\n</p><p>The City of New Orleans makes no guarantees regarding the availability, performance, or uninterrupted access to any web map or spatial application. These applications are subject to periodic maintenance, updates, and outages that may affect accessibility and functionality. The City of New Orleans reserves the right to modify, update, or discontinue this data, web map, or spatial application at any time without prior notice.</p>",
+  "culture": "en-us",
+  "properties": null,
+  "advancedSettings": null,
+  "url": "https://services.arcgis.com/VhMjCzR3cIjEkh7L/arcgis/rest/services/Existing_and_Proposed_Bikeways_View_Layer/FeatureServer",
+  "proxyFilter": null,
+  "access": "public",
+  "size": 1023,
+  "subInfo": 0,
+  "appCategories": [],
+  "industries": [],
+  "languages": [],
+  "largeThumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "listed": false,
+  "commentsEnabled": true,
+  "numComments": 0,
+  "numRatings": 0,
+  "avgRating": 0,
+  "numViews": 8318,
+  "scoreCompleteness": 50,
+  "groupDesignations": null,
+  "apiToken1ExpirationDate": -1,
+  "apiToken2ExpirationDate": -1,
+  "lastViewed": 1791918000000
+}

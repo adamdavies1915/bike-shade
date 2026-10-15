@@ -1,0 +1,14 @@
+{
+  "osm_retrieved_utc": "2026-10-13T20:23:59.266834+00:00",
+  "scope": "247 candidate city records plus 0.0005 degree padding; OSM primary map API",
+  "ways": 15903,
+  "city_miles": 187.38247763066542,
+  "old_gap_miles": 15.66436741178306,
+  "candidate_city_records": 247,
+  "triage_counts": {
+    "needs_survey": 158,
+    "bicycle_access_already_mapped": 2,
+    "partial_bike_tags": 76,
+    "already_has_bike_tags": 11
+  }
+}

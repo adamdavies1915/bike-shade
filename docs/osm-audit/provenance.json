@@ -1,0 +1,13 @@
+{
+  "checked_date": "2026-10-13",
+  "osm_api": "https://api.openstreetmap.org/api/0.6/map.json",
+  "tile_count": 57,
+  "city_license_url": "https://www.arcgis.com/sharing/rest/content/items/dbe68efb96304bd7b43c3424fceab175?f=json",
+  "sha256": {
+    "public/data/routes.geojson": "094ea98dc024aa75a0aee1f7de62dc777bf791d609ed17415bb01ef678128d0c",
+    "public/data/city-bikeways.geojson": "83da952aeeb515c2ba24e9e0b4fd3c17162fb267ba29cb1bc59d055914d98879",
+    "docs/osm-audit/osm-current-candidates.json": "03c2c338ef9d4a3d25b6b090d6e2e1bff211ddd78d6863799f9910be6db77ff2",
+    "docs/osm-audit/osm-relations.json": "0eeec165a695b8cbd2e44d30b764a7c4f94372934cf9fd4094f322d2a0b318cf",
+    "docs/osm-audit/city-item.json": "f53999b435afd3bcc39c05e813981acdb6e9c4ffa68fb7406a08c87b0387f75b"
+  }
+}
