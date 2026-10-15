@@ -1,8 +1,8 @@
 # Bike Shade · New Orleans
 
-Live map: https://bikeshade.cargobay.dev · Source: https://github.com/adamdavies1915/bike-shade
+Live map: https://adamdavies1915.github.io/bike-shade · Source: https://github.com/adamdavies1915/bike-shade
 
-A self-hosted recreation of the shaded-bike-map idea using **Leaflet**, **Bike Streets**, and a **NOAA C-CAP canopy analysis**. No ArcGIS account, SDK, service, or subscription is required. The app is static HTML/CSS/JavaScript served by nginx; Python GIS tools prepare the data offline.
+A self-hosted recreation of the shaded-bike-map idea using **Leaflet**, **Bike Streets**, and a **NOAA C-CAP canopy analysis**. No ArcGIS account, SDK, service, or subscription is required. The app is static HTML/CSS/JavaScript hosted on GitHub Pages; Python GIS tools prepare the data offline.
 
 ## Current status — canopy analysis complete
 
@@ -11,7 +11,7 @@ A self-hosted recreation of the shaded-bike-map idea using **Leaflet**, **Bike S
 - **19,026 of 19,029 route segments** have canopy measurements. Three insufficiently covered segments remain explicitly unknown. The low-stress network snapshot totals approximately **510.8 miles**, including portions of the surrounding urban area inside the bounding box.
 - Canopy filter, transparent tree-cover overlay, neighborhood navigation, construction markers, route popups, shareable map positions, mobile layout, and source downloads are implemented.
 - Nine unit/integration tests pass, including actual raster pixel counting and out-of-bounds handling. JavaScript syntax, data integrity, and Python compilation pass. Desktop/mobile browser checks and container validation are recorded under `test-results/`.
-- Docker image built locally. **Coolify deployment configuration: `bikeshade.cargobay.dev`, internal port 80, `/health`.**
+- **Hosting: GitHub Pages**, automatically deployed from `main` by `.github/workflows/pages.yml`.
 
 ## Preview
 
@@ -83,23 +83,20 @@ The running map reads the downloaded city data locally. The City’s ArcGIS serv
 
 The City's service named `TreeCanopy` was deliberately not used as a measurement: its own description says it is a public-tree inventory and not a true canopy layer, omitting private property.
 
-## Coolify deployment
+## GitHub Pages deployment
 
-The current canopy import and checks are complete. To deploy:
+The `.github/workflows/pages.yml` workflow validates the JavaScript and canopy data, then publishes only `public/` to GitHub Pages on every push to `main`. It can also be run manually from the Actions tab. In repository **Settings → Pages**, the publishing source must be **GitHub Actions**.
 
-1. Add the source repository to Coolify and choose **Dockerfile** build pack, repository root as build context.
-2. Set internal application port to **80**, attach your chosen domain, and enable HTTPS.
-3. Health check: `GET /health` on port 80.
-4. Deploy. No secrets, database, external GIS service, or runtime environment variables are needed.
+Live URL: https://adamdavies1915.github.io/bike-shade/
 
-For a local container check: `docker build -t bike-shade .` then `docker run --rm -p 8080:80 bike-shade`.
+No build step, secrets, database, or runtime environment variables are needed. Asset and data paths are relative so the map works under the `/bike-shade/` project path. Refresh data locally and push the updated `public/` files to publish a new snapshot; raw GIS inputs are excluded from hosting.
 
-The Docker image includes only `public/` and nginx configuration. Refresh data locally and redeploy to publish a new snapshot. For embedding on Bike Easy, use an iframe pointed at the deployed HTTPS URL; the server intentionally does not add a frame-blocking header.
+The Dockerfile and nginx configuration remain available for optional local container previews: `docker build -t bike-shade .` then `docker run --rm -p 8080:80 bike-shade`. GitHub Pages does not use nginx configuration or its `/health` endpoint.
 
 ## Embedding
 
-Click **Embed** on the live map to copy an iframe with the current view, enabled layers and canopy filter. The `?embed=1` view fills its frame and offers collapsible Map controls. Suggested height: 650px; width: 100%. The embedding site must allow `https://bikeshade.cargobay.dev` in its iframe/content security policy.
+Click **Embed** on the live map to copy an iframe with the current view, enabled layers and canopy filter. The `?embed=1` view fills its frame and offers collapsible Map controls. Suggested height: 650px; width: 100%. The embedding site must allow `https://adamdavies1915.github.io` in its iframe/content security policy.
 
 ```html
-<iframe src="https://bikeshade.cargobay.dev/?embed=1" title="Bike Shade — New Orleans" width="100%" height="650" style="border:0" loading="lazy" allow="geolocation"></iframe>
+<iframe src="https://adamdavies1915.github.io/bike-shade/?embed=1" title="Bike Shade — New Orleans" width="100%" height="650" style="border:0" loading="lazy" allow="geolocation"></iframe>
 ```
